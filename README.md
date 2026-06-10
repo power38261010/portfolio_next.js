@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Alejandro Arrua | Fullstack Engineer Portfolio
 
-## Getting Started
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://react-ts-netflix.vercel.app/movies-netflix)
+[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 
-First, run the development server:
+Portafolio profesional de Alejandro Arrua, Analista de Sistemas y Desarrollador Fullstack. Diseñado con una estética **Premium Synthwave / Miami Vice**, enfocado en mostrar habilidades técnicas de alto nivel y arquitectura de software.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Stack Tecnológico
+
+- **Framework:** [Next.js 14](https://nextjs.org/) (App Router ready, aunque usando Pages Router).
+- **Lenguaje:** [TypeScript](https://www.typescriptlang.org/) (Tipado estricto habilitado).
+- **Estilos:** [Tailwind CSS](https://tailwindcss.com/) + [Framer Motion](https://www.framer.com/motion/) para animaciones.
+- **UI:** Glassmorphism custom components (eliminando dependencia de MUI).
+- **Internacionalización:** Sistema dinámico de locales (ES/EN) mediante `getStaticProps`.
+
+## 🛠️ Estructura del Proyecto
+
+```text
+src/
+├── components/     # Componentes modulares y reutilizables
+├── constants/      # Datos estáticos (JSON) y tipos globales
+├── hooks/          # Hooks personalizados (useDarkMode, etc.)
+├── locales/        # Archivos de traducción (JSON)
+├── pages/          # Rutas y lógica de servidor (Next.js)
+└── styles/         # Configuración de temas y CSS global
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚙️ Configuración y Desarrollo
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Requisitos
+- Node.js 18.x o superior
+- npm o yarn
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Instalación
+```bash
+npm install
+```
 
-## Learn More
+### Desarrollo
+```bash
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Construcción para Producción
+```bash
+npm run build
+npm run start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌐 Internacionalización (i18n)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+El proyecto utiliza la funcionalidad nativa de Next.js para detección de idioma. Las traducciones se encuentran en `src/locales/` y se cargan estáticamente según la ruta para maximizar el rendimiento y SEO.
 
-## Deploy on Vercel
+## 📈 Mejoras Recientes (Auditoría 2026)
+- ✅ **Narrativa de Impacto:** Refactorización de textos para un enfoque senior orientado a negocio.
+- ✅ **Optimización Técnica:** Migración a TypeScript estricto y eliminación de `any`.
+- ✅ **UI/UX:** Implementación de Glassmorphism y animaciones fluidas con Framer Motion.
+- ✅ **Performance:** Optimización de carga de recursos y manejo de estados.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📄 Licencia
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Este proyecto es de uso personal para portafolio. Todos los derechos reservados © 2026.

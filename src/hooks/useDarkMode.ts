@@ -6,17 +6,20 @@ const useDarkMode = () => {
   const [themeStyles, setThemeStyles] = useState(darkTheme);
 
   useEffect(() => {
-    const localTheme = window.localStorage.getItem('theme');
+    const localTheme = window.localStorage.getItem('theme') as 'light' | 'dark' | null;
+    let initialTheme: 'light' | 'dark' = 'dark';
+
     if (localTheme) {
-      setTheme(localTheme as 'light' | 'dark');
-      setThemeStyles(localTheme === 'light' ? lightTheme : darkTheme);
+      initialTheme = localTheme;
     } else {
       const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const initialTheme = prefersDarkMode ? 'dark' : 'light';
-      setTheme(initialTheme);
-      setThemeStyles(initialTheme === 'light' ? lightTheme : darkTheme);
+      initialTheme = prefersDarkMode ? 'dark' : 'light';
     }
-  }, [theme]);
+
+    setTheme(initialTheme);
+    setThemeStyles(initialTheme === 'light' ? lightTheme : darkTheme);
+    document.documentElement.setAttribute('data-theme', initialTheme);
+  }, []);
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';

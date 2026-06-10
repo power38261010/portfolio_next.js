@@ -1,48 +1,44 @@
-import React from 'react';
+import { Project } from '../../constants/types';
 import CardItem from '../CardItem/CardItem';
-import styles from '../Module-CSS/index.module.css';
-
-const scrollbarStyles = `
-  ::-webkit-scrollbar {
-    width: 10px; /* Ancho de la barra de desplazamiento */
-  }
-
-  ::-webkit-scrollbar-track {
-    background: #e5e5e5; /* Color de fondo de la pista */
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background-color: #ff4d9e; /* Color del pulgar de la barra de desplazamiento (fucsia/rosa/violeta) */
-    border-radius: 5px; /* Borde redondeado del pulgar */
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: #ff1f81; /* Color del pulgar al pasar el mouse (tono más oscuro) */
-  }
-`;
+import { motion } from 'framer-motion';
 
 interface Props {
-  projects: any[];
-  lang?: any;
+  projects: Project[];
+  lang: any;
 }
+
 const SectionProjects: React.FC<Props> = ({ projects, lang }) => {
   return (
-    <section style={{ padding: '32px 16px', color: 'white' }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative' }}>
+    <section id="projects" className="py-20 px-6 w-full">
+      <div className="max-w-6xl mx-auto">
+        
+        <motion.div 
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className="mb-12"
+        >
+          <h2 className="text-4xl font-black text-white mb-2 uppercase tracking-tighter">
+            {lang.my_projects}
+          </h2>
+          <div className="h-1.5 w-24 bg-gradient-to-r from-fuchsia-600 to-cyan-500 rounded-full"></div>
+        </motion.div>
 
-        <h2 className={styles.animateColorChange} style={{ fontSize: '1.875rem', fontWeight: 'bold', marginBottom: '16px' }}>
-          {lang.my_projects}
-        </h2>
-      <style>{scrollbarStyles}</style>
-      <div style={{ margin: '0 auto', maxWidth: '1200px', overflowX: 'auto' }}>
-        <div style={{ display: 'flex' }}>
-          {projects.map((project) => (
-            <div key={project.id} style={{ margin: '4px 16px' }}>
-              <CardItem key={project.id} item={project} lang={lang} />
-            </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+          {projects.map((project, index) => (
+            <motion.div 
+              key={project.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="h-full"
+            >
+              <CardItem item={project} lang={lang} />
+            </motion.div>
           ))}
         </div>
-      </div>
+
       </div>
     </section>
   );

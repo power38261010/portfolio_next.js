@@ -1,8 +1,13 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 
-const useScrollButtons = (id) => {
-  const scrollContainerRef = useRef(null);
-  const [scrollState, setScrollState] = useState({
+const useScrollButtons = (id: string | number) => {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [scrollState, setScrollState] = useState<{
+    [key: string | number]: {
+      isScrollableLeft: boolean;
+      isScrollableRight: boolean;
+    };
+  }>({
     [id]: {
       isScrollableLeft: false,
       isScrollableRight: false,
@@ -16,7 +21,7 @@ const useScrollButtons = (id) => {
         ...prevState,
         [id]: {
           isScrollableLeft: scrollLeft > 0,
-          isScrollableRight: scrollLeft + clientWidth < scrollWidth,
+          isScrollableRight: Math.ceil(scrollLeft + clientWidth) < scrollWidth,
         },
       }));
     }

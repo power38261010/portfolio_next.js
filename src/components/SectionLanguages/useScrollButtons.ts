@@ -3,13 +3,13 @@ import { useState, useEffect, useRef } from 'react';
 const useScrollButtons = () => {
   const [isScrollableLeft, setIsScrollableLeft] = useState(false);
   const [isScrollableRight, setIsScrollableRight] = useState(false);
-  const scrollContainerRef = useRef(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const checkScrollButtons = () => {
     if (scrollContainerRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
       setIsScrollableLeft(scrollLeft > 0);
-      setIsScrollableRight(scrollLeft + clientWidth < scrollWidth);
+      setIsScrollableRight(Math.ceil(scrollLeft + clientWidth) < scrollWidth);
     }
   };
 

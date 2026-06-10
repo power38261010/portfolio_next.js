@@ -3,11 +3,13 @@ import { ThemeProvider } from '@mui/material/styles';
 import theme from '../styles/theme';
 import { appWithTranslation } from 'next-i18next';
 import { useEffect } from 'react';
-import '../styles/global.css'
-function MyApp({ Component, pageProps }) {
+import type { AppProps } from 'next/app';
+import '../styles/global.css';
+
+function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const jssStyles = document.querySelector('#jss-server-side');
-    if (jssStyles) {
+    if (jssStyles && jssStyles.parentElement) {
       jssStyles.parentElement.removeChild(jssStyles);
     }
   }, []);

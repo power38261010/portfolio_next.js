@@ -32,7 +32,7 @@ const CardItem: React.FC<Props> = ({ item, lang }) => {
 
       <div className="relative p-6 flex-grow flex flex-col">
         {/* Media Section */}
-        <div className="relative h-56 w-full mb-6 rounded-2xl overflow-hidden bg-black/40">
+        <div className="relative h-72 w-full mb-6 rounded-2xl overflow-hidden bg-black/40 flex items-center justify-center">
           <AnimatePresence mode="wait">
             {!isHovered || !varVideoID ? (
               <motion.img
@@ -42,7 +42,7 @@ const CardItem: React.FC<Props> = ({ item, lang }) => {
                 exit={{ opacity: 0 }}
                 src={item?.poster_url || item?.image_url}
                 alt={item?.name || 'Project image'}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             ) : (
               <motion.div
@@ -63,7 +63,8 @@ const CardItem: React.FC<Props> = ({ item, lang }) => {
                       modestbranding: 1,
                       mute: 1,
                       loop: 1,
-                      playlist: varVideoID
+                      playlist: varVideoID,
+                      suggestedQuality: 'hd1080'
                     }
                   }}
                   className="w-full h-full"
@@ -89,7 +90,10 @@ const CardItem: React.FC<Props> = ({ item, lang }) => {
 
         <div className="text-gray-400 text-sm mb-6 flex-grow leading-relaxed">
           {description && (
-            <div dangerouslySetInnerHTML={{ __html: description.replace(/\*\*(.*?)\*\*/g, '<b class="text-fuchsia-400">$1</b>') }} />
+            <div dangerouslySetInnerHTML={{ __html: description
+              .replace(/\*\*(.*?)\*\*/g, '<br/><b class="text-fuchsia-400">$1</b>')
+              .replace('<br/><b', '<b') // No poner br antes del primero
+            }} />
           )}
         </div>
 

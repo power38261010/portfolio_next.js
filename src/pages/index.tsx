@@ -49,18 +49,18 @@ const Home: React.FC<Props> = ({ initialLanguage, texts, startups, projects, rep
         texts={texts}
       />
       
-      <main
-        className="relative"
-        style={{
-          minHeight: '100vh',
-          overflowX: 'hidden',
-          backgroundImage: "url('/assets/bauty_miami_vice.gif')",
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-          backgroundAttachment: 'fixed',
-        }}
-      >
+      <main className="relative min-h-screen overflow-hidden">
+        {/* Video de Fondo */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="fixed inset-0 w-full h-full object-cover z-0"
+        >
+          <source src="/assets/bauty_miami_vice.mp4" type="video/mp4" />
+        </video>
+
         <div className="relative z-10 flex flex-col items-center">
           <SectionAboutMe 
             aboutText={texts.who_i_am} 
@@ -75,8 +75,8 @@ const Home: React.FC<Props> = ({ initialLanguage, texts, startups, projects, rep
           <ContactCTA texts={texts} language={language} />
         </div>
         
-        {/* Overlay para legibilidad si el GIF es muy brillante */}
-        <div className="fixed inset-0 bg-black/30 pointer-events-none z-0"></div>
+        {/* Overlay para legibilidad */}
+        <div className="fixed inset-0 bg-black/40 pointer-events-none z-0"></div>
       </main>
 
       <footer className="bg-black/90 py-12 px-6 border-t border-white/10 text-center text-gray-500 text-sm">

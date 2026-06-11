@@ -6,22 +6,18 @@
       "https://miro.medium.com/v2/resize:fit:1400/0*VhctaUPL1str8CW3.png",
       "https://images.velog.io/images/vamos_eon/post/67b0f6f6-941d-42da-ad7a-626ff0a96533/jwt.png",
       "https://mui.com/static/logo.png",
-      "https://www.cajademedicos.com.ar/wp-content/uploads/logo-mercado-pago.png",
+      "/assets/tech/mercadopago.png",
       "https://miro.medium.com/v2/resize:fit:512/1*JEHLmWo6_SrpHPiP4AimIw.png",
-      "https://play-lh.googleusercontent.com/JIF3NcTOFRfaIruhGcEybAajkEpCbPvzKkUkKJP63VU1eB57JibONQRw1lxyiKgDgSs=w600-h300-pc0xffffff-pd",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1KeKU9SvWgqiHyiIlhOE0JOdB3n4e86DZ2A&s",
-      "https://camo.githubusercontent.com/98248b1bf462485aa41895e496c77664244583c89327baffb9dfa5af3a55ca89/68747470733a2f2f7777772e63686172746a732e6f72672f6d656469612f6c6f676f2d7469746c652e737667",
-      "https://diversetalent.ai/wp-content/uploads/2024/03/vercel.jpg"
+      "https://play-lh.googleusercontent.com/JIF3NcTOFRfaIruhGcEybAajkEpCbPvzKkUkKJP63VU1eB57JibONQRw1lxyiKgDgSs=w600-h300-pc0xffffff-pd"
     ],
     "backend": [
       "https://desarrolloweb.com/storage/tag_images/actual/BzOL16MEqsKOe0VThjF6FXPBi0uyK16lkTety9Wz.png",
       "https://www.muylinux.com/wp-content/uploads/2019/09/NETCore.png",
       "https://desarrolloweb.com/storage/tag_images/actual/5k3LvpkqveO2SQQ8SO0NIoui6PNZ8mrNTnqG9W6z.png",
       "https://learn.microsoft.com/es-es/ef/core/what-is-new/ef-core-8.0/ef8.png",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr1YMrW2sMbmxfsNfX_uzsUv-1H5TaB-WAww&s",
-      "https://www.cajademedicos.com.ar/wp-content/uploads/logo-mercado-pago.png",
+      "/assets/tech/mercadopago.png",
       "https://www.iperiusbackup.net/wp-content/uploads/2016/05/1768.sql_logo.png",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Microsoft_Azure_Logo.svg/2560px-Microsoft_Azure_Logo.svg.png"
+      "/assets/tech/azure.png"
     ],
     "video_tutorial_es": "https://www.youtube.com/watch?v=k-hLQVbg3qo",
     "video_tutorial_en": "https://www.youtube.com/watch?v=k-hLQVbg3qo",
@@ -37,7 +33,7 @@
     "name": "Video Games Arrua",
     "frontend": [
       "https://d2gr4gsp182xcm.cloudfront.net/lemoncode/lemoncode-tv/training/forward-ref/forward-ref.png",
-      "https://www.bairesdev.com/wp-content/uploads/2020/07/redux.svg",
+      "/assets/tech/redux.png",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuHnJDLOcdm_0b6N6kNj-1OvO9KhKYgqIy0w&s",
       "https://diversetalent.ai/wp-content/uploads/2024/03/vercel.jpg"
     ],
@@ -45,8 +41,8 @@
       "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png?20170401104355",
       "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png",
       "https://miro.medium.com/v2/resize:fit:661/1*XcE0wR1ZmWLFbdF2dE5WuA.png",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Microsoft_Azure_Logo.svg/2560px-Microsoft_Azure_Logo.svg.png"
+      "/assets/tech/postgresql.png",
+      "/assets/tech/azure.png"
     ],
     "video_tutorial_es": "https://www.youtube.com/watch?v=VqQ-u6EDc0k&ab_channel=AlejandroArrua",
     "video_tutorial_en": "https://www.youtube.com/watch?v=VqQ-u6EDc0k&ab_channel=AlejandroArrua",
